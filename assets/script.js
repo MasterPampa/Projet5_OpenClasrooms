@@ -39,7 +39,7 @@ const alldots = document.querySelectorAll('.dot');
 //on applique la class selected en fonction de celui selectionné
 alldots[currentDot].classList.add('dot_selected'); 
 
-//listeners qui renvoi une valeur en fonction du click
+//listeners du click
 left_arrow.addEventListener("click", function(previousSlide) { 
 	if (previousSlide.button === 0){
 
@@ -53,13 +53,14 @@ left_arrow.addEventListener("click", function(previousSlide) {
 		alldots[currentDot].classList.add('dot_selected');
 	    console.log("Compteur Dot ="+ currentDot);
 	}
+	//pour l'exercice il est demandé de detecter les différents cliques
 	else if (previousSlide.button === 1){
 	  	console.log("clique droit sur fleche gauche");
 	}
 	
   });
   
-  //listeners qui renvoi une valeur en fonction du click sur l'autre fleche
+  //listeners fonction du click sur l'autre fleche
   let right_arrow = document.getElementById("right_arrow"); 
   right_arrow.addEventListener("click", function(nextSlide) { 
 	if (nextSlide.button === 0){
